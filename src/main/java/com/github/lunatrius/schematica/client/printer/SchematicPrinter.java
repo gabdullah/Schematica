@@ -199,7 +199,7 @@ public class SchematicPrinter {
             return false;
         }
 
-        if (ConfigurationHandler.destroyBlocks && !world.isAirBlock(realPos) && this.minecraft.playerController.isInCreativeMode()) {
+        if (ConfigurationHandler.destroyBlocks && !world.isAirBlock(realPos)) {
             this.minecraft.playerController.clickBlock(realPos, EnumFacing.DOWN);
 
             this.timeout[x][y][z] = (byte) ConfigurationHandler.timeout;
